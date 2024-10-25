@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rashid Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <!--Font used-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Fjalla+One&display=swap" rel="stylesheet">
+    <!--Animation scroll effect-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body class="overflow-x-hidden font-Fjalla leading-8 dark:bg-darkTheme dark:text-white">
+
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-18% dark:hidden">
+
+        <img src="images/header-bg-color.png" alt=" " class="w-full" >
+
+    </div>
+
+
+    <nav class="w-full fixed px-5 lg:px-8 xl:px[8%] py-4 flex items-center justify-between z-50" >
+        <img src="images/logo.png" alt="logo" class="w-28 h-22  cursor-pointer mr-14 dark:hidden" data-aos="zoom-in" data-aos-duration="1500">
+        <img src="images/logo_dark.png" alt="logo" class="w-28 h-22  cursor-pointer mr-14 hidden dark:block">
+
+        <ul class="hidden md:flex items-center gap-6  lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity(50) font-Fjalla dark:border dark:border-white/50 dark:bg-transparent">
+
+            <li data-aos="zoom-out" data-aos-duration="1500"> <a href="#top">Home</a></li>
+            <li data-aos="zoom-out" data-aos-duration="1500"> <a href="#about">About Me</a></li>
+            <li data-aos="zoom-out" data-aos-duration="1500"> <a href="#skill">Skill</a></li>
+            <li data-aos="zoom-out" data-aos-duration="1500"> <a href="#portfolio">Portfolio</a></li>
+            <li data-aos="zoom-out" data-aos-duration="1500"> <a href="#contact">Contact Me</a></li>
+        </ul>
+
+    <div class="flex items-center gap-4">
+        <button onclick="toggleTheme()">
+            <img src="images/moon_icon.png" alt=""
+            class="w-6 dark:hidden">
+            <img src="images/sun_icon.png" alt=""
+            class="w-6 hidden dark:block">
+        </button>
+
+        <a href="#contact"
+        class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4" data-aos="zoom-out" data-aos-duration="1500">Contact 
+        <img src="images/arrow-icon.png" alt="" class="w-3  dark:hidden">
+
+        <img src="images/arrow-icon-dark.png" alt="" class="w-3 hidden dark:block">
+         </a>
+
+        <button class="block md:hidden ml-3" onclick="openMenu()">
+            <img src="images/menu-black.png" alt="" class="w-6 dark:hidden">
+            <img src="images/menu-white.png" alt="" class="w-6 hidden dark:block">
+        </button>
+
+    </div>
+
+    <!-------mobile menu-------->
+
+      <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-green-50 transition duration-500 font-Fjalla dark:bg-[#45663f] dark:text-white">
+               
+        <div class="absolute right-6 top-6"  onclick="closeMenu()">
+            <img src="images/close-black.png" alt="" class="w-5 cursor-pointer dark:hidden">
+            <img src="images/close-white.png" alt="" class="w-5 cursor-pointer hidden dark:block">
+        </div>
+
+        <li> <a href="#top">Home</a></li>
+        <li> <a href="#about">About Me</a></li>
+        <li> <a href="#skill">Skill</a></li>
+        <li> <a href="#portfolio">Portfolio</a></li>
+        <li> <a href="#contact">Contact Me</a></li>
+      </ul>
+
+</nav>
+
+<!----- header ----->
+
+<div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 pt-20">
+    <img src="./images/user.png" alt="" class="rounded-full w-32" data-aos="zoom-in" data-aos-duration="1000">
+
+    <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Fjalla" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700" >Hello <img src="./images/hand-icon.png" alt="" class="w-6 py-2"> I'm Rashid  </h3>
+
+    <div class="text-3xl sm:text-6xl lg:text-[50px] font-Cantarell" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm a
+        <span class="typewriter-text"></span>
+        <label for="">|</label>
+    </div>
+    
+    <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">I am a frontend developer from Bangladesh,Dhaka. With experience of 1 year</p>
+
+    <!--
+    <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Fjalla">Hello <img src="./images/hand-icon.png" alt="" class="w-6 py-2"> I'm Alahadur Rashid  </h3>
+
+    <h1 class="text-3xl sm:text-6xl lg:text-[60px] font-Cantarell "> Frontend Web Developer </h1>
+
+         <h1 class="text-3xl sm:text-6xl lg:text-[60px] font-Cantarell" >based in Bangladesh </h1>
+
+    <p class="max-w-2xl mx-auto font-Cantarell">I am a frontend developer from Bangladesh,Dhaka. With experience of 1 year</p>
+    --->
+
+    <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+        <a href="./images/Rashid-Resume.pdf" download
+         class="px-10 py-3 border rounded-full border-gray-500 bg-white text-wrap flex items-center gap-2 transition duration-300 ease-in-out hover:scale-110 dark:text-black"
+         >Download CV 
+         <img src="./images/download-icon.png" alt=" " class="w-4"> 
+         
+        <a href="contact" class=" px-10 py-3 border rounded-full bg-gradient-to-t from-[#87bb7f9e] to-[#BAFF39] text-wrap flex items-center gap-2 transition duration-300 ease-in-out hover:scale-110 dark:border-transparent ">
+            Contact me </a>
+
+    </div>
+
+</div>
+
+<!----------navbar end here-------->
+
+
+<!------About me start here-------->
+
+<div id="about" class="w-full px-[12%] py-10 scroll-mt-20" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700">
+    <h4 class="text-center mb-2 text-lg" data-aos="fade-right" data-aos-duration="2000">Introduction</h4>
+    <h2 class="text-center text-5xl" data-aos="fade-up" data-aos-duration="2000">About Me</h2>
+
+
+<div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">  
+    
+<div class="max-w-max mx-auto relative"> <img src="./images/user-image.jpg" alt=""class="w-64 sm:w-80 rounded-3xl max-w-none" data-aos="zoom-out" data-aos-duration="3000"> 
+
+<div class="bg-white w-1/2 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0.15)] flex items-center justify-center">
+
+    <img src="./images/circular-text.png" alt="" class="w-full animate-spin_slow"> 
+    <!--Inline tailwindcss animation- [spin_6.5s_linear_infinte]-->
+
+    <img src="./images/dev-icon.png" alt="" class="w-1/4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+
+</div>
+
+
+</div>
+
+<div class="flex-1"> 
+    <p class="mb-10 max-w-2xl" data-aos="fade-left"> I am an experienced Frontend Developer with over a decade of professional expertise in the field. Throughout my career, I have had the privilege of collaborating with prestigious organizations, contributing to their success and growth.</p>
+
+
+    <!-- Section: Split screen -->
+     <!-- <section class="bg-gray-200 min-h-screen flex justify-center mt-10 pt-20">
+   <div class="w-80">
+   </div>
+  </section>-->
+
+              <!-- Timeline -->
+
+              
+  <div class="grid grid-cols-auto gap-4 sm:grid-cols-2 ml-2"data-aos="fade-up" data-aos-duration="1000">
+
+    <!-- Each <div> is a single column.
+    Place some content inside to see the effect. -->
+    <div>
+  
+      <!-- Timeline -->
+  <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+    <!-- Item -->
+     <h2 class="text-xl text-gray-800 text-center  font-bold text-gray-800 dark:text-white">Education</h2>
+    <div class="flex gap-x-3 pt-5">
+      <!-- Left Content -->
+      <div class="w-16 text-end">
+        <span class="text-xs text-gray-500 dark:text-neutral-400">2019-2022</span>
+      </div>
+      <!-- End Left Content -->
+
+  <!-- Icon -->
+  <div class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+    <div class="relative z-10 size-7 flex justify-center items-center">
+      <img class="shrink-0 size-6 rounded-md dark:hidden" src="images/edu-icon.png" alt="Avatar">
+
+      <img src="images/edu-icon-dark.png" alt="Avatar" class="shrink-0 size-6 rounded-md hidden dark:block ">
+    </div>
+  </div>
+  <!-- End Icon -->
+    
+  
+      <!-- Right Content -->
+      <div class="grow pt-0.5 pb-8">
+        <h3 class="flex gap-x-1.5 font-semibold text-gray-700 dark:text-white">
+          BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY
+        </h3>
+        <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+          Limkokwing University of Creative Technology
+        </p>
+        <button type="button" class="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+          <img class=" float-start shrink-0 size-4 rounded-full" src="images/pin.png" alt="Avatar">
+          Cyberjaya, Selangor, Malaysia
+        </button>
+      </div>
+      <!-- End Right Content -->
+    </div>
+    <!-- End Item -->
+  
+    <!-- Item -->
+    <div class="flex gap-x-3 lg:gap-1">
+      <!-- Left Content -->
+      <div class="w-16 text-end">
+        <span class="text-xs text-gray-500 dark:text-neutral-400">2015-2017</span>
+      </div>
+      <!-- End Left Content -->
+  
+       <!-- Icon -->
+  <div class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+    <div class="relative z-10 size-7 flex justify-center items-center">
+      <img class="shrink-0 size-6 rounded-md dark:hidden" src="images/edu-icon.png" alt="Avatar">
+      <img class="shrink-0 size-6 rounded-full hidden dark:block" src="images/edu-icon-dark.png" alt="Avatar">
+    </div>
+  </div>
+  <!-- End Icon -->
+  
+      <!-- Right Content -->
+      <div class="grow pt-0.5 pb-8">
+        <h3 class="flex gap-x-1.5 font-semibold text-gray-700 dark:text-white">
+          HIGHER SECEONDARY SCHOOL CERTIFICATE
+        </h3>
+        <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+          Dhaka Imperial College
+        </p>
+        <button type="button" class="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+          <img class="shrink-0 size-4 rounded-full" src="images/pin.png" alt="Avatar">
+          Dhaka, Bangladesh
+        </button>
+      </div>
+      <!-- End Right Content -->
+    </div>
+    <!-- End Item -->
+
+    <!-- Item -->
+    <div class="flex gap-x-3">
+      <!-- Left Content -->
+      <div class="w-13 md:w-12 text-end">
+        <span class="text-xs text-gray-500 dark:text-neutral-400">2012-2014</span>
+      </div>
+      <!-- End Left Content -->
+  
+       <!-- Icon -->
+  <div class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+    <div class="relative z-10 size-7 flex justify-center items-center">
+      <img class="shrink-0 size-6 rounded-full dark:hidden" src="images/edu-icon.png" alt="Avatar">
+      <img class="shrink-0 size-6 rounded-full hidden dark:block" src="images/edu-icon-dark.png" alt="Avatar">
+    </div>
+  </div>
+  <!-- End Icon -->
+  
+      <!-- Right Content -->
+      <div class="grow pt-0.5 pb-8">
+        <h3 class="flex gap-x-1.5 font-semibold text-gray-700 dark:text-white">
+          SECEONDARY SCHOOL CERTIFICATE
+        </h3>
+        <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+          Alatunnesha High School
+        </p>
+        <button type="button" class="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+          <img class="shrink-0 size-4 rounded-full" src="images/pin.png" alt="Avatar">
+          Dhaka, Bangladesh
+        </button>
+      </div>
+      <!-- End Right Content -->
+    </div>
+    <!-- End Item -->
+    
+  </div>
+  <!-- End Timeline -->
+  
+    </div>
+  
+  
+
+    <div>
+  
+      <!--Experience Timeline -->
+  <div class="pl-8" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
+    <h2 class="text-center text-xl text-gray-800 font-semibold dark:text-white">Experience</h2>
+   
+    <!-- Item -->
+    <div class="flex gap-x-3 pt-5">
+      <!-- Left Content -->
+      <div class="w-16 text-end">
+        <span class="text-xs text-gray-500 dark:text-neutral-400">2022-2024</span>
+      </div>
+      <!-- End Left Content -->
+  
+       <!-- Icon -->
+  <div class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+    <div class="relative z-10 size-7 flex justify-center items-center">
+      <img class="shrink-0 size-6 rounded-md dark:hidden" src="images/project-icon.png" alt="Avatar">
+      <img class="shrink-0 size-6 rounded-md hidden dark:block" src="images/project-icon-dark.png" alt="Avatar">
+    </div>
+  </div>
+  <!-- End Icon -->
+  
+      <!-- Right Content -->
+      <div class="grow pt-0.5 pb-8">
+        <h3 class="flex gap-x-1.5 font-semibold text-gray-700 dark:text-white">
+          IT Specialist
+        </h3>
+        <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+          Nova Medical Center
+        </p>
+        <button type="button" class="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-lime-40 focus:outline-none focus:bg-lime-30 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+          <img class="shrink-0 size-4 rounded-full" src="images/pin.png" alt="Avatar">
+          Dhaka, Bangladesh
+        </button>
+      </div>
+      <!-- End Right Content -->
+    </div>
+    <!-- End Item -->
+  
+  </div>
+  <!-- End Timeline -->
+  
+    </div>
+  
+  </div>
+
+
+
+  <!-- Section: Split screen -->
+
+    <!---
+
+    <ul class="grid grid-cols-auto sm:grid-cols-3 gap-6 max-w-4xl">
+       
+        <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]"> 
+            <img src="./images/edu-icon.png" alt="" class="mx-auto w-7 mt-2" >
+            <h3 class="text-center my-4 font-semibold text-gray-700">Education</h3>
+            <p class="text-center justify-center text-gray-600 text-sm"> Bachelor of Science In Information Technology </p>
+               <p class="text-center text-gray-800 text-sm">2019-2021</p>
+        </li>
+
+        <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+            <img src="./images/code-icon.png" alt="" class="w-7 mt-3 mx-auto" >
+            <h3 class=" text-center my-4 font-semibold text-gray-700">Languages</h3>
+            <p class="text-center justify-center text-gray-600 text-sm">HTML, CSS, BootStrap, JavaScript, Tailwind CSS, React JS</p>
+        </li>
+
+        <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+            <img src="./images/project-icon.png" alt="" class="w-7 mt-3 mx-auto" >
+            <h3 class=" text-center my-4 font-semibold text-gray-700">Projects</h3>
+            <p class=" text-center text-gray-600 text-sm">Built more than five projects</p>
+        </li>
+        
+    </ul>
+
+    ---->
+
+    <!--Tools I use--->
+
+</div>
+
+</div>
+
+</div>
+
+<!---about me end here------>
+
+
+
+<!----Skill start here------>
+
+<div id="skill" class="w-full px-[12%] py-10 scroll-mt-20" data-aos="fade-up" data-aos-duration="2000" >
+    <h4 class="text-center mb-2 text-lg" data-aos="fade-right" data-aos-duration="1000">What I offer</h4>
+    <h2 class="text-center text-5xl"data-aos="fade-up" data-aos-duration="2000">My Skills</h2>
+    <p class="text-center Justify-center max-w-2xl mx-auto mt-5 mb-12"data-aos="fade-up" data-aos-duration="1000">As a developer my expertise in web technologies such as HTML, cascading style sheets (CSS), and JavaScript, as well as skills like problem-solving and communication with 'websites and web applications' user to create visually appealing, user-friendly, and responsive front end components. </p>
+
+
+                                  <!--Progess bar--->
+
+      <div class="grid grid-cols-2 grid-cols-auto gap-10 mb-10 data-aos="fade-up" data-aos-duration="1000">
+
+      <!-- Each <div> is a single column.
+      Place some content inside to see the effect. -->
+      <div data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
+        <div class="space-y-3">
+        <!-- Progress -->
+        <div>
+          <div class="inline-block mb-2 ms-[calc(80%-1.25rem)] py-0.5 px-1.5 bg-blue-50 border border-blue-200 text-xs font-medium text-blue-600 rounded-lg dark:bg-blue-800/30 dark:border-blue-800 dark:text-blue-500">80%</div>
+          <h3 class="text-sm font-semibold text-gray-800 dark:text-white">HTML</h3>
+          <div class="flex w-full h-2 bg-gray-200 rounded-full overflow-hidden dark:bg-neutral-700" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+            <div class="flex flex-col justify-center rounded-full overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-blue-500" style="width: 80%"></div>
+          </div>
+        </div>
+        <!-- End Progress -->
+      
+        <!-- Progress -->
+        <div>
+          <div class="inline-block mb-2 ms-[calc(70%-1.25rem)] py-0.5 px-1.5 bg-blue-50 border border-blue-200 text-xs font-medium text-blue-600 rounded-lg dark:bg-blue-800/30 dark:border-blue-800 dark:text-blue-500">70%</div>
+          <h3 class="text-sm font-semibold text-gray-800 dark:text-white">CSS</h3>
+          <div class="flex w-full h-2 bg-gray-200 rounded-full overflow-hidden dark:bg-neutral-700" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+            <div class="flex flex-col justify-center rounded-full overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-blue-500" style="width: 70%"></div>
+          </div>
+        </div>
+        <!-- End Progress -->
+      
+        <!-- Progress -->
+        <div>
+          <div class="inline-block mb-2 ms-[calc(50%-1.25rem)] py-0.5 px-1.5 bg-blue-50 border border-blue-200 text-xs font-medium text-blue-600 rounded-lg dark:bg-blue-800/30 dark:border-blue-800 dark:text-blue-500">50%</div>
+          <h3 class="text-sm font-semibold text-gray-800 dark:text-white">JavaScript</h3>
+          <div class="flex w-full h-2 bg-gray-200 rounded-full overflow-hidden dark:bg-neutral-700" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+            <div class="flex flex-col justify-center rounded-full overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-blue-500" style="width: 50%"></div>
+          </div>
+        </div>
+        <!-- End Progress -->
+      
+        <!-- Progress -->
+        <div>
+          <div class="inline-block mb-2 ms-[calc(75%-1.25rem)] py-0.5 px-1.5 bg-blue-50 border border-blue-200 text-xs font-medium text-blue-600 rounded-lg dark:bg-blue-800/30 dark:border-blue-800 dark:text-blue-500">75%</div>
+          <h3 class="text-sm font-semibold text-gray-800 dark:text-white">BootStrap</h3>
+          <div class="flex w-full h-2 bg-gray-200 rounded-full overflow-hidden dark:bg-neutral-700" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+            <div class="flex flex-col justify-center rounded-full overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-blue-500" style="width: 75%"></div>
+          </div>
+        </div>
+        <!-- End Progress -->
+    
+        <div>
+          <div class="inline-block mb-2 ms-[calc(60%-1.25rem)] py-0.5 px-1.5 bg-blue-50 border border-blue-200 text-xs font-medium text-blue-600 rounded-lg dark:bg-blue-800/30 dark:border-blue-800 dark:text-blue-500">60%</div>
+          <h3 class="text-sm font-semibold text-gray-800 dark:text-white">Tailwind CSS</h3>
+          <div class="flex w-full h-2 bg-gray-200 rounded-full overflow-hidden dark:bg-neutral-700" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+            <div class="flex flex-col justify-center rounded-full overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-blue-500" style="width: 60%"></div>
+          </div>
+        </div>
+               
+      </div>
+      </div>
+    
+    <!----Tools I use---->
+    
+      <div data-aos="fade-left" data-aos-duration="1500" data-aos-delay="500">
+    
+      <ul class="flex items-center gap-4 mt-10" data-aos="fade-up" data-aos-duration="1000">
+
+        <h4 class="my-6 text-gray-700 my-5 mt-5 mx-10 text-center dark:text-white/80">
+          Tools I use <img src="./images/right-arrow.png" alt="" class="items-center"> </h4>
+    
+         <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+          <img src="./images/vscode.png" alt="" class="w-5 sm:w-7">
+         </li>
+    
+         <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
+          <img src="./images/firebase.png" alt="" class="w-5 sm:w-7">
+         </li>
+    
+         <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
+          <img src="./images/mongodb.png" alt="" class="w-5 sm:w-7">
+         </li>
+    
+         <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
+          <img src="./images/figma.png" alt="" class="w-5 sm:w-7">
+         </li>
+    
+         <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
+          <img src="./images/git.png" alt="" class="w-5 sm:w-7">
+         </li>
+          </ul>
+      </div>
+
+      <!---Tools I use end here-->
+    
+    </div>                         
+                                        
+                  <!---Progess bar end-->
+
+
+    <div class="grid grid-cols-auto sm:grid-cols-4 gap-6 max-w-6xl" data-aos="fade-up" data-aos-duration="2000" > <!--"grid grid-cols-4 sm:grid-cols-4 gap-6 my-10"-->
+        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff hover:-translate-y-1 duration-500 dark:hover:bg-[#2a004a] dark:hover:shadow-white" data-aos="fade-right" data-aos-duration="2000">
+
+            <img src="./images/web-icon.png" alt=" " class="mx-auto w-10">
+            <h3 class="text-center text-lg my-4 text-gray-700 dark:text-white/90">Web Design</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Web development is the process of building, programming...</p>
+            <a href="" class="flex items-center gap-2 text-sm mt-5">Read more</a> <img src="./images/right-arrow.png" alt=" " class="w-4">
+        </div>
+
+        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff hover:-translate-y-1 duration-500 dark:hover:bg-[#2a004a] dark:hover:shadow-white" data-aos="fade-right" data-aos-duration="2000">
+            
+            <img src="./images/mobile-icon.png" alt=" " class=" mx-auto w-10">
+            <h3 class="text-center text-lg my-4 text-gray-700 dark:text-white/90">Mobile app</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Web development is the process of building, programming...</p>
+            <a href="" class="flex items-center gap-2 text-sm mt-5">Read more</a> <img src="./images/right-arrow.png" alt=" " class="w-4">
+        </div>
+
+        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff hover:-translate-y-1 duration-500 dark:hover:bg-[#2a004a] dark:hover:shadow-white" data-aos="fade-left" data-aos-duration="2000">
+            
+            <img src="./images/ui-icon.png" alt=" " class="mx-auto w-10">
+            <h3 class="text-center text-lg my-4 text-gray-700 dark:text-white/90">Ecommerce website</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Web development is the process of building, programming...</p>
+            <a href="" class="flex items-center gap-2 text-sm mt-5">Read more</a> <img src="./images/right-arrow.png" alt=" " class="w-4">
+        </div>
+
+        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff hover:-translate-y-1 duration-500 dark:hover:bg-[#2a004a] dark:hover:shadow-white" data-aos="fade-left" data-aos-duration="2000">
+            
+            <img src="./images/graphics-icon.png" alt=" " class="mx-auto w-10">
+            <h3 class="text-center text-lg my-4 text-gray-700 dark:text-white/90">Graphics design</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Web development is the process of building, programming...</p>
+            <a href="" class="flex items-center gap-2 text-sm mt-5">Read more</a> <img src="./images/right-arrow.png" alt=" " class="w-4">
+        </div>
+
+    </div>
+
+</div>
+
+
+<!----Skill section end here------>
+
+
+
+
+<!---My work start here----->
+
+
+<div id="portfolio" class="w-full px-[12%] py-10 scroll-mt-20">
+    <h4 class="text-center mb-2 text-lg" data-aos="fade-right" data-aos-duration="2000">My Portfolio</h4>
+    <h2 class="text-center text-5xl" data-aos="fade-up" data-aos-duration="1000">My latest works</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12" data-aos="fade-up" data-aos-duration="2000">
+        Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in front-end development.</p>
+
+    <div class="grid grid-cols-auto sm:grid-cols-4 gap-6 max-w-6xl mb-10" data-aos="fade-up" data-aos-duration="2000"> <!--grid grid-cols-4 my-10 gap-5-->
+         <!--grid grid-cols-[400px_minmax(900px,_1fr)_100px] my-10 gap-5-->
+
+        <!--Col 1-->
+            <div class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat bg-cover bg-center reounded-lg relative cursor-pointer group" data-aos="fade-right" data-aos-duration="2000">
+
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    
+                    <div>
+                        <h2 class="font-semibold dark:text-black">Frontend project</h2>
+                        <p class="text-sm text-gray-700">Web Design</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#0000] group-hover:bg-green-300 transition"> <img src="./images/send-icon.png" alt="" class="w-5">
+                    
+                </div>
+
+            </div>
+
+       </div>
+
+       <!--Col 2-->
+       <div class="aspect-square bg-[url('./images/work-2.png')] bg-no-repeat bg-cover bg-center reounded-lg relative cursor-pointer group" data-aos="fade-right" data-aos-duration="2000">
+
+        <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+            
+            <div>
+                <h2 class="font-semibold dark:text-black">Geo based app</h2>
+                <p class="text-sm text-gray-700">Mobile app</p>
+            </div>
+            <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#0000] group-hover:bg-green-300 transition"> <img src="./images/send-icon.png" alt="" class="w-5">
+            
+        </div>
+
+    </div>
+
+</div>
+
+<!--Col 3-->
+<div class="aspect-square bg-[url('./images/work-3.png')] bg-no-repeat bg-cover bg-center reounded-lg relative cursor-pointer group" data-aos="fade-left" data-aos-duration="2000">
+
+    <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+        
+        <div>
+            <h2 class="font-semibold dark:text-black">Ecommerce</h2>
+            <p class="text-sm text-gray-700">Web Design</p>
+        </div>
+        <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#0000] group-hover:bg-green-300 transition"> <img src="./images/send-icon.png" alt="" class="w-5">
+        
+    </div>
+
+</div>
+
+</div>
+
+<!--Col 4-->
+<div class="aspect-square bg-[url('./images/work-4.png')] bg-no-repeat bg-cover bg-center reounded-lg relative cursor-pointer group" data-aos="fade-left" data-aos-duration="2000">
+
+    <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+        
+        <div>
+            <h2 class="font-semibold dark:text-black">UI/UX designing</h2>
+            <p class="text-sm text-gray-700">UI/UX Design</p>
+        </div>
+        <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#0000] group-hover:bg-green-300 transition"> <img src="./images/send-icon.png" alt="" class="w-5">
+        
+         </div>
+        </div>
+
+      </div>
+    </div>
+
+   <a href="#"> <p class="w-max justify-center items-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-[#B8ED6B] duration-500 dark:text-white/90 dark:border-white">Show more </p> </a>
+
+   </div>
+   
+
+   <!----Portfolio end here---->
+
+
+   <!---Contact start here----->
+
+   <div id="contact" class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('/images/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center
+   dark:bg-none
+   " data-aos="fade-up" data-aos-duration="2000">
+    <h4 class="text-center mb-2 text-lg"data-aos="fade-right" data-aos-duration="1000">Say hi to Rashid!</h4>
+    <h2 class="text-center text-5xl" data-aos="fade-up" data-aos-duration="1000">Contact Me</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12" data-aos="fade-up" data-aos-duration="2000">
+      I'd love to hear from you! If you have any questions, comments or feedback, please use the form below.
+    </p>
+
+    <form method="POST" action="https://api.web3forms.com/submit" class="max-w-2xl mx-auto">
+      <input type="hidden" name="access_key" value="0b8b0a54-881b-4345-a379-00ca3a497f09">
+
+        <div class="grid grid-cols-auto gap-6 mt-10 mb-8">
+            <input type="text" placeholder="Enter your name" class="flex-1 p-3 outine-none border-[0.5ox] border-gray-400 rounded-md bg-white dark:bg-[#2a004a] dark:border-white/90" required name="name">
+            
+            <input type="email" placeholder="Enter your email" class="flex-1 p-3 outine-none border-[0.5ox] border-gray-400 rounded-md bg-white dark:bg-[#2a004a] dark:border-white" required name="email">
+        </div>
+
+        <textarea row="6" placeholder-="Enter your message" class="w-full p-4 outine-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-[#2a004a] dark:border-white/90" required name="message" >
+        </textarea>
+
+        <button class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-400 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-[#2a004a]" data-aos="fade-up" data-aos-duration="1000">
+            Submit now
+            <img src="./images/right-arrow-white.png" alt="" class="w-4">
+        </button>
+
+    </form>
+
+   </div>
+
+
+
+   <!---Footer section start here----->
+
+   <div clas="mt-20"> 
+    <div class="text-center" data-aos="fade-up" data-aos-duration="2000">
+      <img src="./images/logo.png" alt="" class="h-30 w-20 mx-auto mb-2 rounded-md dark:hidden">
+      <img src="./images/logo_dark.png" alt="" class="h-30 w-20 mx-auto mb-2 rounded-md hidden dark:block">
+
+      <div class="w-max flex items-center gap-2 mx-auto" data-aos="fade-up" data-aos-duration="2000">
+        
+        <img src="./images/mail_icon.png" alt="" class="w-6 dark:hidden">
+        <img src="./images/mail_icon_dark.png" alt="" class="w-6 hidden dark:block ">
+        
+        <div class="grow">
+          
+            <a class="relative inline-block font-medium text-black before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-[#B8ED6B] hover:before:bg-black focus:outline-none focus:before:bg-black dark:text-white dark:hover:before:bg-white dark:focus:before:bg-white"
+            href="mailto:imalrashid07@gmail.com" >
+             imalrashid07@gmail.com
+            </a>
+          
+        </div>
+      </div>
+
+    </div>
+
+<div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6 ">
+    <p>@ 2024 Alahadur Rashid. All rights reserved. </p>
+    <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+       <!-- Whatsapp -->
+       <li> <a href="https://web.whatsapp.com/" target="_blank">
+        <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#32D851]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 448 512">
+            <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+            <path
+              d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+          </svg>
+        </span>
+        </a></li>
+          <!-- Facebook -->
+        <li> <a href="https://www.facebook.com/rashid.nissan.77/"target="_blank">
+          <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#1877f2]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+              <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+              <path
+                d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+            </svg>
+          </span></a></li>
+
+          <!-- Instagram -->
+        <li> <a href="https://instagram.com/rashid.nissan"target="_blank">
+      <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#c13584]">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+    <path
+      d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+  </svg>
+</span>
+        </a></li>
+
+        <!-- Github -->
+        <li> <a href="https://github.com/Rashid-nissan" target="_blank">
+   <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#333]">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+    <path
+      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+  </svg>
+</span>
+        </a></li>
+    </ul>
+</div>
+
+
+   </div>
+
+
+   
+
+
+
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+     AOS.init({offset:0});
+   </script>
+<script src="script.js"></script>   
+</body>
+</html>
